@@ -66,8 +66,8 @@
 			children = (
 				3C26768B2124D52A006053BD /* AppDelegate.swift */,
 				3C26768F2124D52A006053BD /* Main.storyboard */,
-				3CBE6FA02125D15200D05790 /* Controllers */,
 				3CBE6F9A2125D11700D05790 /* Models */,
+				3CBE6FA02125D15200D05790 /* Controllers */,
 				3C26769D2124D880006053BD /* Resources */,
 			);
 			path = game;
@@ -104,8 +104,8 @@
 		3CBE6FA02125D15200D05790 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3EA708362125E11900EB5B18 /* ViewControllers */,
 				3CBE6F9F2125D14800D05790 /* ModelControllers */,
+				3EA708362125E11900EB5B18 /* ViewControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
