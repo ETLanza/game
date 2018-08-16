@@ -12,7 +12,11 @@ class GameMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		GameObjectController.getAllData { (success) in
+			if success {
+				print("this worked")
+			}
+		}
     }
     
 	@IBAction func playGameButtonTapped(_ sender: UIButton) {
