@@ -16,12 +16,8 @@ class GameMenuViewController: UIViewController {
     }
     
 	@IBAction func playGameButtonTapped(_ sender: UIButton) {
+		performSegue(withIdentifier: "toGameVC", sender: sender)
+		// start timer
+		// set a new charade
 	}
-	
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		
-    }
-
 }
