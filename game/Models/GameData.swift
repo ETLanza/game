@@ -10,10 +10,12 @@ import Foundation
 
 class GameData {
     
-    var timer: Int
+    var seconds: Int
+    var timer: Timer
     var score: Int
     
-    init(timer: Int, score: Int) {
+    init(seconds: Int, timer: Timer, score: Int) {
+        self.seconds = seconds
         self.timer = timer
         self.score = score
     }
