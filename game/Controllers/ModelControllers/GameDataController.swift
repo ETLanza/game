@@ -17,13 +17,19 @@ class GameDataController {
     var gameData: GameData?
     
     //MARK: - Helper Functions
-    func startNewGame() {
-        let gameData = GameData(timer: 120, score: 0)
+    func startNewGameWith(seconds: Int) {
+        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(decreaseTimer), userInfo: nil, repeats: true)
+        let gameData = GameData(seconds: seconds, timer: timer, score: 0)
         self.gameData = gameData
     }
     
     func incrementScore() {
         guard let gameData = gameData else { print("how did the score not go up?"); return }
         gameData.score += 1
+    }
+    
+    @objc func decreaseTimer() {
+        guard let gameData = gameData else { return }
+        gameData.seconds -= 1
     }
 }
