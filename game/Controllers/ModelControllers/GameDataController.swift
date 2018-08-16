@@ -17,9 +17,8 @@ class GameDataController {
     var gameData: GameData?
     
     //MARK: - Helper Functions
-    func startNewGameWith(seconds: Int) {
-        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(decreaseTimer), userInfo: nil, repeats: true)
-        let gameData = GameData(seconds: seconds, timer: timer, score: 0)
+    func startNewGameWith(seconds: Int = 60) {
+        let gameData = GameData(seconds: seconds)
         self.gameData = gameData
     }
     
