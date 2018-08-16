@@ -17,9 +17,10 @@ class GameDataController {
     var gameData: GameData?
     
     //MARK: - Helper Functions
-    func startNewGameWith(seconds: Int = 60) {
+    func startNewGame(withSeconds seconds: Int = 60) -> GameData {
         let gameData = GameData(seconds: seconds)
         self.gameData = gameData
+		return gameData
     }
     
     func incrementScore() {
