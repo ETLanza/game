@@ -18,10 +18,4 @@ class GameMenuViewController: UIViewController {
 			}
 		}
     }
-    
-	@IBAction func playGameButtonTapped(_ sender: UIButton) {
-		performSegue(withIdentifier: "toGameVC", sender: sender)
-		// start timer
-		// set a new charade
-	}
 }

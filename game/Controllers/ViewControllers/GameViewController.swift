@@ -18,28 +18,27 @@ class GameViewController: UIViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 	
 	@IBAction func gotItNextButtonTapped(_ sender: UIButton) {
 		// add 1 to score
-//		GameDataController.shared.incrementScore()
+		GameDataController.shared.incrementScore()
 		// update lable with new charade
 		
-		// CREATE FUNCTION
-		let index = Int(arc4random_uniform(UInt32(GameObjectController.shared.objects.count)))
-		let charade = GameObjectController.shared.objects[index]
-		charadeLabel.text = charade.text
+		randomCharade()
 	}
 	
 	@IBAction func passButtonTapped(_ sender: UIButton) {
-		let index = Int(arc4random_uniform(UInt32(GameObjectController.shared.objects.count)))
-		let charade = GameObjectController.shared.objects[index]
-		charadeLabel.text = charade.text
+		randomCharade()
 	}
 	
 	@IBAction func newGameButton(_ sender: UIButton) {
 		navigationController?.popViewController(animated: true)
 	}
 	
+	func randomCharade() {
+		let index = Int(arc4random_uniform(UInt32(GameObjectController.shared.objects.count)))
+		let charade = GameObjectController.shared.objects[index]
+		charadeLabel.text = charade.text
+	}
 }
