@@ -9,6 +9,8 @@
 import UIKit
 
 class GameViewController: UIViewController {
+	
+	var gameData: GameData?
 
 	@IBOutlet weak var timerLabel: UILabel!
 	@IBOutlet weak var charadeLabel: UILabel!
@@ -16,10 +18,11 @@ class GameViewController: UIViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
+		
     }
 	
 	@IBAction func gotItNextButtonTapped(_ sender: UIButton) {
+		//
 	}
 	
 	@IBAction func passButtonTapped(_ sender: UIButton) {
